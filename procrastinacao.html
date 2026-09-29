@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procrastinação e Adiamento - Lara Burim</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body class="relative min-h-screen pb-16 bg-[#0a0814] text-gray-100">
+
+    <div id="canvas-container"></div>
+
+    <!-- Navegação / Voltar -->
+    <nav class="max-w-5xl mx-auto px-4 pt-8 relative z-10 flex items-center justify-between">
+        <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-purple-500/30 text-purple-300 text-sm font-semibold hover:bg-purple-500/20 transition">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i> Voltar ao Painel
+        </a>
+        <span class="px-3 py-1 text-xs font-bold rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-400 uppercase tracking-widest">
+            Foco & Concentração
+        </span>
+    </nav>
+
+    <!-- Cabeçalho -->
+    <header class="pt-8 pb-6 px-4 text-center relative z-10">
+        <div class="max-w-4xl mx-auto">
+            <div class="inline-flex items-center justify-center p-4 rounded-2xl bg-pink-500/20 text-pink-400 border border-pink-500/30 mb-4 shadow-[0_0_20px_rgba(255,0,127,0.3)]">
+                <i data-lucide="clock" class="w-10 h-10"></i>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-400 to-cyan-300 tracking-tight text-glow mb-4">
+                Vencendo a Procrastinação e o Adiamento
+            </h1>
+            <p class="text-gray-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+                Entenda a neurociência por trás da paralisia de ação e utilize estratégias comportamentais para retomar o controle do seu tempo.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 my-8 relative z-10 space-y-8">
+
+        <!-- Card de Introdução e Causa -->
+        <section class="glass-card p-6 md:p-8 rounded-3xl border border-purple-500/20">
+            <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                <i data-lucide="brain-circuit" class="w-6 h-6 text-pink-400"></i> Por que procrastinamos?
+            </h2>
+            <p class="text-gray-300 leading-relaxed mb-4">
+                A procrastinação não é preguiça nem falha de caráter; é um mecanismo falho de <strong>regulação emocional</strong>. Quando você encara uma tarefa complexa ou cansativa, seu cérebro interpreta a atividade como uma ameaça de desconforto e busca alívio imediato no celular, redes sociais ou tarefas irrelevantes.
+            </p>
+
+            <!-- Figura Ilustrativa / Diagrama SVG -->
+            <div class="my-6 p-6 bg-black/50 rounded-2xl border border-pink-500/30 flex flex-col md:flex-row items-center justify-around gap-6">
+                <div class="text-center">
+                    <svg class="w-20 h-20 mx-auto text-pink-500 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="9" stroke-width="1.5" stroke-dasharray="4 4"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"/>
+                    </svg>
+                    <p class="text-xs text-pink-400 font-bold uppercase mt-2">1. Estresse / Desconforto</p>
+                </div>
+                <i data-lucide="chevron-right" class="w-6 h-6 text-gray-500 hidden md:block"></i>
+                <div class="text-center">
+                    <svg class="w-20 h-20 mx-auto text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <rect x="5" y="2" width="14" height="20" rx="2" stroke-width="1.5"/>
+                        <line x1="12" y1="18" x2="12" y2="18.01" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <p class="text-xs text-purple-300 font-bold uppercase mt-2">2. Fuga para Distração</p>
+                </div>
+                <i data-lucide="chevron-right" class="w-6 h-6 text-gray-500 hidden md:block"></i>
+                <div class="text-center">
+                    <svg class="w-20 h-20 mx-auto text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                    </svg>
+                    <p class="text-xs text-cyan-300 font-bold uppercase mt-2">3. Culpa & Mais Pressão</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Técnicas de Resolução -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="glass-card p-6 rounded-2xl border border-cyan-500/20">
+                <h3 class="text-lg font-bold text-cyan-300 mb-3 flex items-center gap-2">
+                    <i data-lucide="zap" class="w-5 h-5"></i> A Regra dos 5 Minutos
+                </h3>
+                <p class="text-gray-300 text-sm leading-relaxed">
+                    A maior fricção da procrastinação está no <strong>início</strong>. Diga a si mesma: <em>"Vou estudar apenas por 5 minutos. Se quiser parar depois, eu paro"</em>. Na maioria das vezes, quebrar a inércia é o suficiente para engrenar a atenção.
+                </p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl border border-purple-500/20">
+                <h3 class="text-lg font-bold text-purple-300 mb-3 flex items-center gap-2">
+                    <i data-lucide="layers" class="w-5 h-5"></i> Micro-Etapas (Micro-Stepping)
+                </h3>
+                <p class="text-gray-300 text-sm leading-relaxed">
+                    Substitua metas intimidadoras como "Estudar Capítulo 4" por passos absurdamente pequenos: "Abrir o livro na página 42", "Ler os 2 primeiros parágrafos". Reduza a meta até que a resistência desapareça.
+                </p>
+            </div>
+        </section>
+
+        <!-- Ações Práticas -->
+        <section class="glass-card p-6 md:p-8 rounded-3xl border border-pink-500/20">
+            <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <i data-lucide="check-square" class="w-5 h-5 text-pink-400"></i> Checklist de Eliminação da Procrastinação
+            </h3>
+            <div class="space-y-3">
+                <div class="p-4 bg-black/40 rounded-xl border border-white/5 flex items-start gap-3">
+                    <i data-lucide="shield-alert" class="w-5 h-5 text-pink-400 mt-0.5"></i>
+                    <div>
+                        <h4 class="text-sm font-bold text-white">Remova as tentações do campo de visão</h4>
+                        <p class="text-xs text-gray-400">Coloque o celular em outro cômodo ou ative o modo Foco Total antes de iniciar qualquer leitura.</p>
+                    </div>
+                </div>
+                <div class="p-4 bg-black/40 rounded-xl border border-white/5 flex items-start gap-3">
+                    <i data-lucide="play-circle" class="w-5 h-5 text-cyan-400 mt-0.5"></i>
+                    <div>
+                        <h4 class="text-sm font-bold text-white">Utilize o Timer de Foco</h4>
+                        <p class="text-xs text-gray-400">Programe um timer de 25 minutos no painel principal e não interrompa a tarefa sob nenhuma hipótese.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+        function init3DBackground() {
+            const container = document.getElementById('canvas-container');
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            container.appendChild(renderer.domElement);
+
+            const geometry = new THREE.BufferGeometry();
+            const count = 500;
+            const positions = new Float32Array(count * 3);
+            for (let i = 0; i < count * 3; i++) {
+                positions[i] = (Math.random() - 0.5) * 15;
+            }
+            geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+            const material = new THREE.PointsMaterial({ size: 0.03, color: 0xff007f, transparent: true, opacity: 0.6 });
+            const points = new THREE.Points(geometry, material);
+            scene.add(points);
+            camera.position.z = 5;
+
+            function animate() {
+                requestAnimationFrame(animate);
+                points.rotation.y += 0.001;
+                renderer.render(scene, camera);
+            }
+            animate();
+        }
+        window.onload = init3DBackground;
+    </script>
+</body>
+</html>

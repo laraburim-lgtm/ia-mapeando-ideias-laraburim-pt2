@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falta de Foco e Dispersão - Lara Burim</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body class="relative min-h-screen pb-16 bg-[#0a0814] text-gray-100">
+
+    <div id="canvas-container"></div>
+
+    <nav class="max-w-5xl mx-auto px-4 pt-8 relative z-10 flex items-center justify-between">
+        <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-purple-500/30 text-purple-300 text-sm font-semibold hover:bg-purple-500/20 transition">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i> Voltar ao Painel
+        </a>
+        <span class="px-3 py-1 text-xs font-bold rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 uppercase tracking-widest">
+            Foco & Concentração
+        </span>
+    </nav>
+
+    <header class="pt-8 pb-6 px-4 text-center relative z-10">
+        <div class="max-w-4xl mx-auto">
+            <div class="inline-flex items-center justify-center p-4 rounded-2xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 mb-4 shadow-[0_0_20px_rgba(0,242,254,0.3)]">
+                <i data-lucide="zap" class="w-10 h-10"></i>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 tracking-tight text-glow mb-4">
+                Superando a Dispersão e o Estudo Passivo
+            </h1>
+            <p class="text-gray-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+                Transforme a leitura vaga em retenção profunda com técnicas de engajamento ativo e retenção cognitiva.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 my-8 relative z-10 space-y-8">
+
+        <!-- Comparação Visual: Passivo vs Activo -->
+        <section class="glass-card p-6 md:p-8 rounded-3xl border border-cyan-500/20">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <i data-lucide="sliders" class="w-6 h-6 text-cyan-400"></i> Estudo Passivo vs. Estudo Ativo
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Passivo -->
+                <div class="p-5 bg-red-950/20 border border-red-500/20 rounded-2xl">
+                    <h3 class="text-base font-bold text-red-400 mb-3 flex items-center gap-2">
+                        <i data-lucide="x-circle" class="w-5 h-5"></i> Método Passivo (Pouca Retenção)
+                    </h3>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li class="flex items-center gap-2"><i data-lucide="minus" class="w-3.5 h-3.5 text-red-400"></i> Ler páginas continuamente sem pausar</li>
+                        <li class="flex items-center gap-2"><i data-lucide="minus" class="w-3.5 h-3.5 text-red-400"></i> Apenas sublinhar frases aleatórias</li>
+                        <li class="flex items-center gap-2"><i data-lucide="minus" class="w-3.5 h-3.5 text-red-400"></i> Assistir videoaulas como se fossem filmes</li>
+                    </ul>
+                </div>
+
+                <!-- Ativo -->
+                <div class="p-5 bg-cyan-950/30 border border-cyan-500/30 rounded-2xl">
+                    <h3 class="text-base font-bold text-cyan-300 mb-3 flex items-center gap-2">
+                        <i data-lucide="check-circle" class="w-5 h-5"></i> Método Ativo (Alta Retenção)
+                    </h3>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> Técnica Feynman (explicar com suas palavras)</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> Resolver questões antes e depois do tema</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> Criar mapas mentais e esquemas visuais</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ilustração SVG Feynman -->
+        <section class="glass-card p-6 md:p-8 rounded-3xl border border-purple-500/20 text-center">
+            <h3 class="text-xl font-bold text-white mb-2">A Técnica Feynman de Aprendizado</h3>
+            <p class="text-xs text-gray-400 mb-6">Se você não consegue explicar um conceito em termos simples, você não o compreendeu profundamente.</p>
+            
+            <div class="flex flex-wrap items-center justify-center gap-6">
+                <div class="p-4 bg-black/40 rounded-xl border border-purple-500/30 w-36">
+                    <i data-lucide="book-open" class="w-8 h-8 mx-auto text-purple-400 mb-2"></i>
+                    <span class="text-xs font-bold text-gray-200">1. Escolha o Tema</span>
+                </div>
+                <i data-lucide="arrow-right" class="w-5 h-5 text-gray-600 hidden sm:block"></i>
+                <div class="p-4 bg-black/40 rounded-xl border border-cyan-500/30 w-36">
+                    <i data-lucide="message-square" class="w-8 h-8 mx-auto text-cyan-400 mb-2"></i>
+                    <span class="text-xs font-bold text-gray-200">2. Ensine uma Criança</span>
+                </div>
+                <i data-lucide="arrow-right" class="w-5 h-5 text-gray-600 hidden sm:block"></i>
+                <div class="p-4 bg-black/40 rounded-xl border border-pink-500/30 w-36">
+                    <i data-lucide="refresh-cw" class="w-8 h-8 mx-auto text-pink-400 mb-2"></i>
+                    <span class="text-xs font-bold text-gray-200">3. Corrija Falhas</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+        function init3DBackground() {
+            const container = document.getElementById('canvas-container');
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            container.appendChild(renderer.domElement);
+
+            const geometry = new THREE.BufferGeometry();
+            const count = 500;
+            const positions = new Float32Array(count * 3);
+            for (let i = 0; i < count * 3; i++) {
+                positions[i] = (Math.random() - 0.5) * 15;
+            }
+            geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+            const material = new THREE.PointsMaterial({ size: 0.03, color: 0x00f2fe, transparent: true, opacity: 0.6 });
+            const points = new THREE.Points(geometry, material);
+            scene.add(points);
+            camera.position.z = 5;
+
+            function animate() {
+                requestAnimationFrame(animate);
+                points.rotation.y += 0.002;
+                renderer.render(scene, camera);
+            }
+            animate();
+        }
+        window.onload = init3DBackground;
+    </script>
+</body>
+</html>
